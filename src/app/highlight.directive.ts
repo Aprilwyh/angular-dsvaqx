@@ -11,7 +11,7 @@ export class HighlightDirective {
   constructor(private el: ElementRef) {}
 
   @Input() defaultColor: string;
-
+  // 在指令内部，该属性叫 highlightColor，在外部，你绑定到它的地方，它叫 appHighlight
   @Input('appHighlight') highlightColor: string;
 
   @HostListener('mouseenter') onMouseEnter() {
